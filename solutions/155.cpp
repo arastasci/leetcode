@@ -25,11 +25,11 @@ public:
     }
     
     int top() {
-        stk.top();
+       return stk.top();
     }
     
     int getMin() {
-        minStk.top().second;
+       return minStk.top().second;
     }
 private:
     stack<int> stk;
