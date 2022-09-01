@@ -23,8 +23,8 @@ public:
     ListNode* reverseList(ListNode* head){
         if(!head || !head->next) return head;
         ListNode* node = reverseList(head->next);
-        node->next = head;
-        node = nullptr;
+        head->next->next = head;
+        head->next = nullptr;
         return node;
     }
 
