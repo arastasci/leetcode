@@ -22,6 +22,8 @@ leetcode solutions
 - implemented a greedy algorithm, working our way from the last index to the first. By using distance and ```nums[i]```, you can greedily walk to the first index.
 ## Q74 - Search a 2D Matrix
 - first find the row, then the column. the conditions may tire you, but you will eventually get it.
+## Q104 - Maximum Depth of Binary Tree
+- Use recursion and find max for every call.
 ## Q121 - Best Time to buy n sell stock
 - One-pass algorithm by keeping track of minimum value at each iteration.
 - Doing comparisons to determine the optimized value itself rather than variables that should result in the most optimal value is useful at times. For example, when looking for max profit, do comparisons on the potential max profit itself rather than trying to find a max value from which to subtract a min value. Doing final comparisons according to what is already known at that moment helps to simplify the flow of the code as well. In other words, work with `maxProfit` and `minValue` instead of maxValue and minValue.
@@ -69,6 +71,8 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 - One of the recursive approaches is to keep stacking the function until you've reached the end, then change pointers as you pop. Note that the iterative solution is actually better in terms of space used.
 ## Q217 - Contains Duplicate
 - Use a set to find duplicate.
+## Q226 - Invert Binary Tree
+- swap, then recursion.
 ## Q242 - Valid Anagram
 - using a frequency table for every unicode character.
 - You could also sort and compare since sorted anagrams become identical.
@@ -76,6 +80,8 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 - It might be a good idea to look for early returns on some validation questions, since once you encounter, say, a negative frequency in this case, you can't recover from it. (?)
 ## Q424 - Longest Repeating Character Replacement
 - two pointer / sliding window question. You can use a frequency table to check for the count, if the current window's character count - the character w/ max count > k, contract the window.
+## Q543 - Diameter of Binary Tree
+- Apply DFS and change the value of `diameter` as it is `left + right`, the sum of two branches.
 ## Q704 - Binary Search
 - left-right pointer determines middle pointer, check where the target stands respective to middle, move the needed pointer to middle while(left <= right)
 

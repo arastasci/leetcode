@@ -3,6 +3,8 @@
         "xstring": "cpp",
         "vector": "cpp",
         "string_view": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "random": "cpp",
+        "limits": "cpp"
     }
 }
