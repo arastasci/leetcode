@@ -87,6 +87,8 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 - two pointer / sliding window question. You can use a frequency table to check for the count, if the current window's character count - the character w/ max count > k, contract the window.
 ## Q543 - Diameter of Binary Tree
 - Apply DFS and change the value of `diameter` as it is `left + right`, the sum of two branches.
+## Q572 - Subtree of Another Tree
+- same with Q110, except the base conditions are trickier.
 ## Q704 - Binary Search
 - left-right pointer determines middle pointer, check where the target stands respective to middle, move the needed pointer to middle while(left <= right)
 
