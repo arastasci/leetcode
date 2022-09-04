@@ -22,8 +22,13 @@ leetcode solutions
 - implemented a greedy algorithm, working our way from the last index to the first. By using distance and ```nums[i]```, you can greedily walk to the first index.
 ## Q74 - Search a 2D Matrix
 - first find the row, then the column. the conditions may tire you, but you will eventually get it.
+## Q110 - Same Tree
+- This question is about clever base cases.
 ## Q104 - Maximum Depth of Binary Tree
 - Use recursion and find max for every call.
+## Q110 - Balanced Binary Tree
+- dfs'ing a binary tree must always have its own method.
+- Passing through a pair of values in recursion methods is memory intensive but makes the problem easier.
 ## Q121 - Best Time to buy n sell stock
 - One-pass algorithm by keeping track of minimum value at each iteration.
 - Doing comparisons to determine the optimized value itself rather than variables that should result in the most optimal value is useful at times. For example, when looking for max profit, do comparisons on the potential max profit itself rather than trying to find a max value from which to subtract a min value. Doing final comparisons according to what is already known at that moment helps to simplify the flow of the code as well. In other words, work with `maxProfit` and `minValue` instead of maxValue and minValue.
