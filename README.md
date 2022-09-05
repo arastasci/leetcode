@@ -22,6 +22,9 @@ leetcode solutions
 - implemented a greedy algorithm, working our way from the last index to the first. By using distance and ```nums[i]```, you can greedily walk to the first index.
 ## Q74 - Search a 2D Matrix
 - first find the row, then the column. the conditions may tire you, but you will eventually get it.
+## Q102 - Binary Tree Level Order Traversal
+- By passing the level through function parameters, you can BFS through the tree with recursion.
+- You can do this easily iteratively.
 ## Q110 - Same Tree
 - This question is about clever base cases.
 ## Q104 - Maximum Depth of Binary Tree
@@ -70,13 +73,18 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 ## Q155 - Min Stack
 - the concept of pairs comes to mind when keeping track of something with a stack. when you pop it, the stack automatically provides the new min at the top() element.
 ## Q167 - Two Sum2 - Input Array is Sorted
-- two pointers where left = 0 and right is at the end of the vector. in order to reach the target you move these two with a condition left < right 
+- two pointers where left = 0 and right is at the end of the vector. in order to reach the target you move these two with a condition left < right.
+## Q199 - Binary Tree Right Side View
+- Always initialise your pointers.
+- DFS and BFS solutions are both possible: With DFS, you pass function parameter `level` and using that, fill `vector<int> levels`. With BFS, you can do a classic queue + iterative solution.
 ## Q206 - Reverse Linked List
 - use a prev pointer and iterate through the list.
 - One of the recursive approaches is to keep stacking the function until you've reached the end, then change pointers as you pop. Note that the iterative solution is actually better in terms of space used.
 ## Q217 - Contains Duplicate
 - Use a set to find duplicate.
-## Q226 - Invert Binary Tree
+## Q235 - Lowest Common Ancestor of a Binary Search Tree
+- You can (again) do this recursively or iteratively, both have the same approaches: the first one that splits the two nodes `p` and `q` is the LCA.
+ ## Q226 - Invert Binary Tree
 - swap, then recursion.
 ## Q242 - Valid Anagram
 - using a frequency table for every unicode character.
