@@ -22,13 +22,15 @@ leetcode solutions
 - implemented a greedy algorithm, working our way from the last index to the first. By using distance and ```nums[i]```, you can greedily walk to the first index.
 ## Q74 - Search a 2D Matrix
 - first find the row, then the column. the conditions may tire you, but you will eventually get it.
+## Q98 - Validate Binary Search Tree
+- By In-Order Traversal(left node -> current root -> right node) you can determine if a tree is a valid BST. You use a stack and push and pop to traverse from left to right.
 ## Q102 - Binary Tree Level Order Traversal
 - By passing the level through function parameters, you can BFS through the tree with recursion.
 - You can do this easily iteratively.
-## Q110 - Same Tree
-- This question is about clever base cases.
 ## Q104 - Maximum Depth of Binary Tree
 - Use recursion and find max for every call.
+## Q110 - Same Tree
+- This question is about clever base cases.
 ## Q110 - Balanced Binary Tree
 - dfs'ing a binary tree must always have its own method.
 - Passing through a pair of values in recursion methods is memory intensive but makes the problem easier.
@@ -86,6 +88,8 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 - You can (again) do this recursively or iteratively, both have the same approaches: the first one that splits the two nodes `p` and `q` is the LCA.
  ## Q226 - Invert Binary Tree
 - swap, then recursion.
+## Q230 - Kth Smallest Element in a BST
+- You can do this with in order traversal (refer to Q98)(DFS) or with BFS and max-heap. I originally implemented this with a cursed recursive dfs solution.
 ## Q242 - Valid Anagram
 - using a frequency table for every unicode character.
 - You could also sort and compare since sorted anagrams become identical.
@@ -99,6 +103,7 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 - same with Q110, except the base conditions are trickier.
 ## Q704 - Binary Search
 - left-right pointer determines middle pointer, check where the target stands respective to middle, move the needed pointer to middle while(left <= right)
-
+## Q1448 - Count Good Nodes in Binary Tree
+- Traversing the tree with DFS is the way I went with this one. If ```node->val >= maxVal``` then increment `res` value.
 
 
