@@ -101,8 +101,15 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 - Apply DFS and change the value of `diameter` as it is `left + right`, the sum of two branches.
 ## Q572 - Subtree of Another Tree
 - same with Q110, except the base conditions are trickier.
+## Q703 - Kth Largest Element in a Stream
+- You keep the Kth largest element as the root of the min-heap, so keep `k` elements in the heap and if size goes over capacity pop.
 ## Q704 - Binary Search
-- left-right pointer determines middle pointer, check where the target stands respective to middle, move the needed pointer to middle while(left <= right)
+- left-right pointer determines middle pointer, check where the target stands respective to middle, move the needed pointer to middle `while(left <= right)`
+## Q973 - K Closest Points to Origin
+- Can be implemented both with max heap and min heap. With min-heap you have to add all the values to the heap and then retrieve the first `k` ones. with max heap you maintain the size of the heap = `k`, if size exceeds it, you pop it; this way the ones besides k smallest values are popped.
+- https://leetcode.com/problems/k-closest-points-to-origin/discuss/221532/C%2B%2B-STL-quickselect-priority_queue-and-multiset
+## Q1046 - Last Stone Weight
+- Classic max-heap question.
 ## Q1448 - Count Good Nodes in Binary Tree
 - Traversing the tree with DFS is the way I went with this one. If ```node->val >= maxVal``` then increment `res` value.
 
