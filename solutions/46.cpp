@@ -11,7 +11,7 @@ public:
 private:
     vector<vector<int>> res;
     void dfs(vector<int>& nums, int start){
-        if(i == nums.size()){
+        if(start == nums.size()){
             res.push_back(nums);
             return;
         }
