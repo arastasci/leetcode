@@ -20,7 +20,7 @@ public:
             keyvalPair[x].push_back(strs[i]);
         }
         vector<vector<string>> res;
-        for(auto& el = keyvalPair.begin(); el != keyvalPair.end(); el++){
+        for(auto el = keyvalPair.begin(); el != keyvalPair.end(); el++){
             res.push_back(el->second);
         }
         return res;
