@@ -18,16 +18,19 @@ leetcode solutions
 
 ## Q27 - Remove Element
 - weird question
-## Q39
-## Q46
-## Q49
-
+## Q39 - Combination Sum
+- DFS through the vector and make a decision tree by backtracking.
+- After you've chosen a path, you either choose to add another one of the most recent added element or to add no more of it. This makes the tree have distinct leaves.            
+## Q46 - Permutations
+- Swap the places of a passed parameter `start` and the iterative parameter `i` and swap them back after you dfs'ed. This is a backtracking problem.
+## Q49 - Group Anagrams
+- serializing(?) the `vector<int> count` of every string as a string key and adding them to a hashmap as key solves the problem.
 ## Q55 - Jump Game
 - implemented a greedy algorithm, working our way from the last index to the first. By using distance and ```nums[i]```, you can greedily walk to the first index.
 ## Q74 - Search a 2D Matrix
 - first find the row, then the column. the conditions may tire you, but you will eventually get it.
-## Q78
-
+## Q78 - Subsets
+- This is a backtracking problem. You create a subset by choosing to add or not add an element. Recursively doing this creates a decision tree.  
 ## Q98 - Validate Binary Search Tree
 - By In-Order Traversal(left node -> current root -> right node) you can determine if a tree is a valid BST. You use a stack and push and pop to traverse from left to right.
 ## Q100 - Same Tree
@@ -50,27 +53,29 @@ leetcode solutions
 ## Q141 - Linked List Cycle
 - Floyd's cycle finding algorithm: Have one slow and one fast pointer, if the fast pointer reaches the end, no cycle. If the fast pointer "catches up" to the slow pointer, there must be a cycle.
 ## Q142 - Linked List Cycle II
+```
 Since. (2S = F) consider the part from 
 start - cycle point = A, 
 cycle point- intersect = B, 
-intersect - cycle point = c
+intersect - cycle point = c 
 
-then slow trival A + B
-fast travel A + (B+C) * N + B
-(B+C) is one cycle and * N number we travel the cycles
+then slow trival A + B 
+fast travel A + (B+C) * N + B 
+(B+C) is one cycle and * N number we travel the cycles 
 
 from 2S = F we know (B+C)*N = a + b
 
-from (B+C)*N = a + b if we remove B from each side
-B*(N-1) + C*N = A.
+from (B+C)*N = a + b if we remove B from each side 
+B*(N-1) + C*N = A. 
 
-then A must be equal to C or eqaul to X*C + Y * B where (X - Y = 1)
+then A must be equal to C or eqaul to X*C + Y * B where (X - Y = 1) 
 In other words A mod(b+c) = C,
 
 As a result when we travel from start to point takes A to cycle points
 and Intersect to cycle points will be same distance or
 travel M cycles then reach to cycle points (from A mod(b+c) = C);
 (thats is why we set 1 ptr at start and 1 at intersect and trival at same rate.)
+```
 - The do-while loop was handy for this question as when we started, the slow != fast equality didn't hold.
 
 ## Q143 - Reorder List
@@ -88,11 +93,12 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 ## Q206 - Reverse Linked List
 - use a prev pointer and iterate through the list.
 - One of the recursive approaches is to keep stacking the function until you've reached the end, then change pointers as you pop. Note that the iterative solution is actually better in terms of space used.
-## Q215
+## Q215 - Kth Largest Element in an Array
+- Using a min heap of size `k` solves the problem.
+-**Another solution is "QuickSelect" which you must implement later.**
 
 ## Q217 - Contains Duplicate
 - Use a set to find duplicate.
-
  ## Q226 - Invert Binary Tree
 - swap, then recursion.
 ## Q230 - Kth Smallest Element in a BST
