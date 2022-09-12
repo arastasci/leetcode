@@ -20,7 +20,12 @@ leetcode solutions
 - weird question
 ## Q39 - Combination Sum
 - DFS through the vector and make a decision tree by backtracking.
-- After you've chosen a path, you either choose to add another one of the most recent added element or to add no more of it. This makes the tree have distinct leaves.            
+- After you've chosen a path, you either choose to add another one of the most recent added element or to add no more of it. This makes the tree have distinct leaves.          
+## Q40 - Combination Sum II
+- You should sort the array to use this to your advantage for finding duplicate values. After the candidates array, you call the dfs method which using a for loop and recursion, backtracks and finds you all the combination sums.
+- The important part here is you do the backtracking by first dfs'ing, then popping the element from the combination and iterating this over a loop, if `prev = candidates[i]`, you continue. If you draw this, a neat decision tree shows up where there is no duplicate values.
+- Thinking the process of backtracking like this as a call stack helps simplify the concept.
+- Another implementation of this problem can be inspired from Q90 - Subsets II.
 ## Q46 - Permutations
 - Swap the places of a passed parameter `start` and the iterative parameter `i` and swap them back after you dfs'ed. This is a backtracking problem.
 ## Q49 - Group Anagrams
@@ -31,6 +36,15 @@ leetcode solutions
 - first find the row, then the column. the conditions may tire you, but you will eventually get it.
 ## Q78 - Subsets
 - This is a backtracking problem. You create a subset by choosing to add or not add an element. Recursively doing this creates a decision tree.  
+## Q79 - Word Search
+- You can either keep track of previously traversed coordinates or invalidate them with an invalid character. 
+- My original solution (which used more memory but was slightly faster) used a `m x n` bool grid for the above.
+- A popular backtracking problem.
+
+## Q90 - Subsets II
+- You sort the array to make it easier to detect duplicates and move on.
+- backtracking and using a for loop makes it possible to eliminate duplicate combinations. Another implementation of this problem can be inspired from Q40 - Combination Sum II.
+
 ## Q98 - Validate Binary Search Tree
 - By In-Order Traversal(left node -> current root -> right node) you can determine if a tree is a valid BST. You use a stack and push and pop to traverse from left to right.
 ## Q100 - Same Tree
