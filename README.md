@@ -124,6 +124,9 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 - You could also sort and compare since sorted anagrams become identical.
 - A hash table is a more generic solution as it can take unicode characters as well.(?)
 - It might be a good idea to look for early returns on some validation questions, since once you encounter, say, a negative frequency in this case, you can't recover from it. (?)
+# Q347 - Top K Frequent Elements
+- Hash the numbers and increment as you encounter, then put them in a heap...
+- Priority queues sort pairs according to their first element.
 ## Q424 - Longest Repeating Character Replacement
 - two pointer / sliding window question. You can use a frequency table to check for the count, if the current window's character count - the character w/ max count > k, contract the window.
 ## Q543 - Diameter of Binary Tree
