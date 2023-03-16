@@ -34,20 +34,18 @@ leetcode solutions
 -   weird question
 
 ## Q39 - Combination Sum
-<<<<<<< HEAD
 
 -   DFS through the vector and make a decision tree by backtracking.
 -   After you've chosen a path, you either choose to add another one of the most recent added element or to add no more of it. This makes the tree have distinct leaves.
 
-=======
-- DFS through the vector and make a decision tree by backtracking.
-- After you've chosen a path, you either choose to add another one of the most recent added element or to add no more of it. This makes the tree have distinct leaves.          
 ## Q40 - Combination Sum II
-- You should sort the array to use this to your advantage for finding duplicate values. After the candidates array, you call the dfs method which using a for loop and recursion, backtracks and finds you all the combination sums.
-- The important part here is you do the backtracking by first dfs'ing, then popping the element from the combination and iterating this over a loop, if `prev = candidates[i]`, you continue. If you draw this, a neat decision tree shows up where there is no duplicate values.
-- Thinking the process of backtracking like this as a call stack helps simplify the concept.
-- Another implementation of this problem can be inspired from Q90 - Subsets II.
->>>>>>> 6501402b98f5782977091eddf68d9482d7996dca
+
+-   You should sort the array to use this to your advantage for finding duplicate values. After the candidates array, you call the dfs method which using a for loop and recursion, backtracks and finds you all the combination sums.
+-   The important part here is you do the backtracking by first dfs'ing, then popping the element from the combination and iterating this over a loop, if `prev = candidates[i]`, you continue. If you draw this, a neat decision tree shows up where there is no duplicate values.
+-   Thinking the process of backtracking like this as a call stack helps simplify the concept.
+-   Another implementation of this problem can be inspired from Q90 - Subsets II.
+    > > > > > > > 6501402b98f5782977091eddf68d9482d7996dca
+
 ## Q46 - Permutations
 
 -   Swap the places of a passed parameter `start` and the iterative parameter `i` and swap them back after you dfs'ed. This is a backtracking problem.
@@ -65,20 +63,19 @@ leetcode solutions
 -   first find the row, then the column. the conditions may tire you, but you will eventually get it.
 
 ## Q78 - Subsets
-<<<<<<< HEAD
 
 -   This is a backtracking problem. You create a subset by choosing to add or not add an element. Recursively doing this creates a decision tree.
-=======
-- This is a backtracking problem. You create a subset by choosing to add or not add an element. Recursively doing this creates a decision tree.  
+
 ## Q79 - Word Search
-- You can either keep track of previously traversed coordinates or invalidate them with an invalid character. 
-- My original solution (which used more memory but was slightly faster) used a `m x n` bool grid for the above.
-- A popular backtracking problem.
+
+-   You can either keep track of previously traversed coordinates or invalidate them with an invalid character.
+-   My original solution (which used more memory but was slightly faster) used a `m x n` bool grid for the above.
+-   A popular backtracking problem.
 
 ## Q90 - Subsets II
-- You sort the array to make it easier to detect duplicates and move on.
-- backtracking and using a for loop makes it possible to eliminate duplicate combinations. Another implementation of this problem can be inspired from Q40 - Combination Sum II.
->>>>>>> 6501402b98f5782977091eddf68d9482d7996dca
+
+-   You sort the array to make it easier to detect duplicates and move on.
+-   backtracking and using a for loop makes it possible to eliminate duplicate combinations. Another implementation of this problem can be inspired from Q40 - Combination Sum II.
 
 ## Q98 - Validate Binary Search Tree
 
@@ -195,22 +192,17 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 -   You can (again) do this recursively or iteratively, both have the same approaches: the first one that splits the two nodes `p` and `q` is the LCA.
 
 ## Q242 - Valid Anagram
-<<<<<<< HEAD
 
 -   using a frequency table for every unicode character.
 -   You could also sort and compare since sorted anagrams become identical.
 -   A hash table is a more generic solution as it can take unicode characters as well.(?)
 -   It might be a good idea to look for early returns on some validation questions, since once you encounter, say, a negative frequency in this case, you can't recover from it. (?)
 
-=======
-- using a frequency table for every unicode character.
-- You could also sort and compare since sorted anagrams become identical.
-- A hash table is a more generic solution as it can take unicode characters as well.(?)
-- It might be a good idea to look for early returns on some validation questions, since once you encounter, say, a negative frequency in this case, you can't recover from it. (?)
 # Q347 - Top K Frequent Elements
-- Hash the numbers and increment as you encounter, then put them in a heap...
-- Priority queues sort pairs according to their first element.
->>>>>>> 6501402b98f5782977091eddf68d9482d7996dca
+
+-   Hash the numbers and increment as you encounter, then put them in a heap...
+-   Priority queues sort pairs according to their first element.
+
 ## Q424 - Longest Repeating Character Replacement
 
 -   two pointer / sliding window question. You can use a frequency table to check for the count, if the current window's character count - the character w/ max count > k, contract the window.
@@ -230,6 +222,10 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 ## Q704 - Binary Search
 
 -   left-right pointer determines middle pointer, check where the target stands respective to middle, move the needed pointer to middle `while(left <= right)`
+
+# Q958 - Check Completeness of a Binary Tree
+
+-   Run a bfs. If you encounter a `nullptr` then you shouldn't encounter any initialized pointers anymore. If you do, return false, if you complete the bfs, return true.
 
 # Q958 - Check Completeness of a Binary Tree
 
