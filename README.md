@@ -44,7 +44,6 @@ leetcode solutions
 -   The important part here is you do the backtracking by first dfs'ing, then popping the element from the combination and iterating this over a loop, if `prev = candidates[i]`, you continue. If you draw this, a neat decision tree shows up where there is no duplicate values.
 -   Thinking the process of backtracking like this as a call stack helps simplify the concept.
 -   Another implementation of this problem can be inspired from Q90 - Subsets II.
-    > > > > > > > 6501402b98f5782977091eddf68d9482d7996dca
 
 ## Q46 - Permutations
 
@@ -173,7 +172,7 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 
 ## Q215 - Kth Largest Element in an Array
 
--   Using a min heap of size `k` solves the problem. -**Another solution is "QuickSelect" which you must implement later.**
+-   Using a min heap of size `k` solves the problem. -**Another solution is "QuickSelect" which you shall implement later.**
 
 ## Q217 - Contains Duplicate
 
