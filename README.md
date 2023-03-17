@@ -1,6 +1,6 @@
 # leetcode
 
-leetcode solutions
+Below are my solutions to some problems in leetcode.
 
 ## Q1 - Two Sum
 
@@ -169,6 +169,11 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 
 -   use a prev pointer and iterate through the list.
 -   One of the recursive approaches is to keep stacking the function until you've reached the end, then change pointers as you pop. Note that the iterative solution is actually better in terms of space used.
+
+## Q208 - Implement Trie
+
+-   Trie (how is it not pronounced tree-ay but try? :D) is a k-ary search tree in which a word can be inserted and found. It is also called prefix tree as you are able to find prefixes in it.
+-   I created a TrieNode struct in which were a `TrieNode*` array of 26 elements (the problem constraint was English lowercase letters) and an `isWord` boolean. With these two and a for loop, you can easily insert, find prefix and search for a word in the tree.
 
 ## Q215 - Kth Largest Element in an Array
 
