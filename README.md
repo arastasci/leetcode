@@ -175,6 +175,12 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 -   Trie (how is it not pronounced tree-ay but try? :D) is a k-ary search tree in which a word can be inserted and found. It is also called prefix tree as you are able to find prefixes in it.
 -   I created a TrieNode struct in which were a `TrieNode*` array of 26 elements (the problem constraint was English lowercase letters) and an `isWord` boolean. With these two and a for loop, you can easily insert, find prefix and search for a word in the tree.
 
+## Q211 - Design Add and Search Words Data Structure
+
+-   The problem's twist is if a char is '.', then any letter can be in that place.
+-   I implemented a trie. The addWord method is pretty much the same as a regular trie.
+-   The trick about the search method is whenever there is a '.', the `search` method is invoked with the proper substring and `TrieNode` (`search(word.substr(i+1, word.size()-i-1), cur->nextLetters[j])`). If any of the 26 letters return true from the `search` method invocation, then return true; else return false.
+
 ## Q215 - Kth Largest Element in an Array
 
 -   Using a min heap of size `k` solves the problem. -**Another solution is "QuickSelect" which you shall implement later.**
@@ -194,6 +200,11 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 ## Q235 - Lowest Common Ancestor of a Binary Search Tree
 
 -   You can (again) do this recursively or iteratively, both have the same approaches: the first one that splits the two nodes `p` and `q` is the LCA.
+
+## Q236 - LCA of a Binary Tree
+
+-   My original solution was to make a stack for a dfs call to `p` and `q` and find where the stacks match first via dumping one in a set and comparing the other's `top()` to find if there's a match with the set.
+-   There's a much smarter solution which recursively checks if the current node is nullptr, p or q, if yes then returns it. If not, it makes a recursive call to both its right and left nodes and stores the result in a pointer, then checks if they're both non-null. If that's the case, its the LCA, return it. If not, one still has to contain p and q's root so return that.
 
 ## Q242 - Valid Anagram
 
