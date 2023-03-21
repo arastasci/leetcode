@@ -258,3 +258,7 @@ travel M cycles then reach to cycle points (from A mod(b+c) = C);
 ## Q1448 - Count Good Nodes in Binary Tree
 
 -   Traversing the tree with DFS is the way I went with this one. If `node->val >= maxVal` then increment `res` value.
+
+## Q2348 - Number of Zero-Filled Subarrays
+
+-   The question is pretty straightforward, i found the amount of subarrays by the two pointers method, find the interval of zeros and the amount of subarrays is n \* (n+1) / 2 for n zeros.
